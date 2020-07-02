@@ -1,0 +1,3 @@
+#
+#Thu Jul 02 09:21:14 CST 2020
+org.example.MainConfig=org.springframework.stereotype.Component

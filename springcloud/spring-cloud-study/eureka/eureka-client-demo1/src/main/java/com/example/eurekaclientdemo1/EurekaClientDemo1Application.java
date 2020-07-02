@@ -4,12 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
-//@EnableEurekaClient
+@EnableEurekaClient
 public class EurekaClientDemo1Application {
 
     public static void main(String[] args) {
@@ -25,8 +24,8 @@ public class EurekaClientDemo1Application {
     /**
      * matchIfMissing是否进行条件匹配如果属性不存在
      */
-    @ConditionalOnProperty(value = "abc", matchIfMissing = true)
     @Bean
+    @ConditionalOnProperty(value = "abc", matchIfMissing = true)
     public ProducerController test() {
         return new ProducerController();
     }

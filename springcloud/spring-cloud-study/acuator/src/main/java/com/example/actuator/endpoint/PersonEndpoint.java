@@ -21,6 +21,7 @@ public class PersonEndpoint {
      * 自定义端点
      * 通过@Endpoint、 @ReadOperation、@WriteOperation、@DeleteOperation
      * 您还可以使用@JmxEndpoint或@WebEndpoint编写技术特定的端点
+     *
      * @Endpoint: 构建 rest api 的唯一路径
      * @ReadOperation: GET请求，响应状态为 200 如果没有返回值响应 404（资源未找到）
      * @WriteOperation: POST请求，响应状态为 200 如果没有返回值响应 204（无响应内容）
